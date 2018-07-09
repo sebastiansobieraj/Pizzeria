@@ -1,8 +1,10 @@
 package pizzeria.demo.Implementation;
 
+import org.springframework.stereotype.Component;
 import pizzeria.demo.Api.IOrder;
 import pizzeria.demo.Api.IPizza;
 
+@Component
 public class Order implements IOrder {
 
     private IPizza pizza;

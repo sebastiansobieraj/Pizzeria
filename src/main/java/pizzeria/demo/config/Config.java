@@ -7,16 +7,16 @@ import pizzeria.demo.Api.IPizza;
 import pizzeria.demo.Implementation.GoodPizza;
 import pizzeria.demo.Implementation.Order;
 
-@Configuration
+//@Configuration
 public class Config {
 
-    @Bean
-    public IPizza pizza() {
-        return new GoodPizza(15, "Dobra");
-    }
-
-    @Bean
-    public IOrder order(IPizza pizza){
-        return new Order(pizza);
-    }
+//    @Bean
+//    public IPizza pizza() {
+//        return new GoodPizza(15, "Dobra");
+//    }
+//
+//    @Bean
+//    public IOrder order(IPizza pizza){
+//        return new Order(pizza);
+//    }
 }

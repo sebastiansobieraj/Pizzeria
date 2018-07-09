@@ -1,5 +1,6 @@
 package pizzeria.demo.Implementation;
 
+import org.springframework.stereotype.Component;
 import pizzeria.demo.Api.IPizza;
 
 public class GoodPizza implements IPizza {
