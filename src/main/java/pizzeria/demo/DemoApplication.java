@@ -14,7 +14,9 @@ public class DemoApplication {
     public static void main(String[] args) {
 //        SpringApplication.run(DemoApplication.class, args);
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AutoConfig.class);
-        IOrder order = context.getBean(Order.class);
+        IOrder order = context.getBean(IOrder.class);
         order.printOrder();
+        IOrder order2 = context.getBean(Order.class);
+        order2.printOrder();
     }
 }
