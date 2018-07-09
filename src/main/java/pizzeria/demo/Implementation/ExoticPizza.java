@@ -13,16 +13,19 @@ public class ExoticPizza implements IPizza {
 
     private int price;
     private String name;
+    @Value("#{goodPizza.price matches '[1-9][1-9]'}")
+    boolean bool;
 
     public ExoticPizza(
-            @Value("1") int price,
-            @Value("Exotic") String name) {
+            @Value("#{ goodPizza.price > 13 ? 13 : 20}") int price,
+            @Value("#{goodPizza.getName()?.toUpperCase()}") String name) {
         super();
         this.price = price;
         this.name = name;
     }
 
     public int getPrice() {
+        System.out.println(bool);
         return price;
     }
 
